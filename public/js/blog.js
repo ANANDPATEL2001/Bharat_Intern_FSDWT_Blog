@@ -27,10 +27,11 @@ const setupBlog = (data) => {
     publish.innerHTML += `${data.publishedAt_date} ${months[data.publishedAt_month]} ${data.publishedAt_year}`;
 
     const article = document.querySelector(".article");
-    addArticle(article, data.article);
+    const articleImageBox = document.querySelector(".article-image-collection");
+    addArticle(article, articleImageBox, data.article);
 }
 
-const addArticle = (ele, data) => {
+const addArticle = (ele, imageBox, data) => {
     console.log(data)
     data = data.split("\n").filter(item => item.length);
     console.log(data)
@@ -65,7 +66,7 @@ const addArticle = (ele, data) => {
 
             let alt = item.slice(2, seperator);
             let src = item.slice(seperator + 2, item.length - 1);
-            ele.innerHTML += `<img src="${src}" alt="${alt}" class="article-image">`;
+            imageBox.innerHTML += `<img src="${src}" alt="${alt}" class="article-image">`;
         }
 
         else {
