@@ -15,13 +15,17 @@ app.use(fileupload());
 
 
 
+// app.get("/", (req, res) => {
+//     // json is used below to pass multiple data/strings
+//     // res.status(200).json({
+//     //     message: "Your server started successfully",
+//     // })
+//     res.sendFile(path.join(initial_path, "home.html"))
+// });
+
 app.get("/", (req, res) => {
-    // json is used below to pass multiple data/strings
-    // res.status(200).json({
-    //     message: "Your server started successfully",
-    // })
     res.sendFile(path.join(initial_path, "home.html"))
-});
+})
 
 app.get("/home", (req, res) => {
     res.sendFile(path.join(initial_path, "home.html"))

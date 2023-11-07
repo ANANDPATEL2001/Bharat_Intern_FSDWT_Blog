@@ -30,6 +30,13 @@ body {
     z-index: 9;
 }
 
+.navbar>.logo {
+    width: 50px;
+    height: 50px;
+    /* margin: -0.1em 0 0 1em; */
+    margin-left: -1em;
+}
+
 .links-container {
     display: flex;
     list-style: none;
