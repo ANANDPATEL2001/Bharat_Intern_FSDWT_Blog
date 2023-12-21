@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Switch, Routes, Route } from 'react-router-dom';
+import { Fragment } from 'react';
+
+import HOC from './Components/HOC'
+import Blog from './pages/Blog/Blog';
+import Component_navbar from './Components/Component.navbar';
+import Component_footer from './Components/Component.footer';
+import Editor from './pages/Editor/Editor';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" Component={() =>
+          <Fragment>
+            {/* <Component_navbar />
+            <Home /> */}
+            <HOC />
+          </Fragment>
+        } />
+
+        {/* <Route path="/editor" Component={() =>
+          <Fragment>
+            <Component_navbar />
+            <Editor />
+            <Component_footer />
+          </Fragment>
+        } /> */}
+
+        <Route path="/:blog" Component={() =>
+          <Fragment>
+            <Component_navbar />
+            <Blog />
+            <Component_footer />
+          </Fragment>
+        } />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

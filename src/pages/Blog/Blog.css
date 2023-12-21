@@ -1,0 +1,130 @@
+.navbar .logo {
+    width: 50px;
+    height: 50px;
+    /* margin: -0.1em 3em 0 1em; */
+    margin-left: 3em;
+}
+
+.blog {
+    width: 100%;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.info-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.blog .article {
+    position: relative;
+    height: fit-content;
+    padding-bottom: 0;
+}
+
+.article,
+.title {
+    min-height: auto;
+    height: fit-content;
+    padding: 0;
+    white-space: normal;
+}
+
+.published {
+    margin: 20px 0 60px;
+    padding: 0 10px;
+    text-transform: capitalize;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.published span {
+    font-weight: 700;
+    font-style: normal;
+}
+
+.article * {
+    margin: 30px 0;
+    color: #2d2d2d;
+}
+
+.article-image-collection {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    justify-items: center;
+    /* align-items: center; */
+    justify-content: space-evenly;
+    width: 85%;
+    margin: 10px auto;
+    padding: 0 40px;
+}
+
+.article-image {
+    max-width: 50vw;
+    max-height: 45vh;
+    display: block;
+    margin: 30px auto;
+    /* object-fit: contain; */
+    border-radius: 0.5rem;
+}
+
+.sub-heading {
+    padding: 0.5vw;
+    color: #121111;
+    font-weight: 600;
+    font-style: oblique;
+    font-size: 40px;
+    margin-left: 1.5rem;
+    margin-top: 80px;
+}
+
+@media screen and (max-width: 1024px) {
+    .article-image-collection {
+        display: grid;
+        grid-gap: 1rem;
+        margin: 10px auto;
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+
+    .article-image {
+        max-width: 70vw;
+    }
+}
+
+
+
+
+
+
+
+
+
+.banner {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    background: #e7e7e7;
+    background-size: cover;
+    background-position: center;
+}
+
+.blog-options {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    margin-top: 0.8em;
+    font-weight: bolder;
+    white-space: pre-wrap;
+}
